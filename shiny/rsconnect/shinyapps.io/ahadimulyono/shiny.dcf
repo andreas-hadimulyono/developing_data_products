@@ -2,6 +2,6 @@ name: shiny
 account: ahadimulyono
 server: shinyapps.io
 appId: 75262
-bundleId: 338499
+bundleId: 338500
 url: https://ahadimulyono.shinyapps.io/shiny
-when: 1451037522.98023
+when: 1451038018.13591

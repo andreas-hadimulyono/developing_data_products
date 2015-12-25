@@ -21,9 +21,18 @@ translateAmToText <- function(am){
 
 shinyServer(
   function(input, output){
-    output$carTransmissionMode <- renderPrint({translateAmToText(input$carTransmissionMode)})
-    output$carCylinder <- renderPrint({input$carCylinder})
-    output$carWeight <- renderPrint({input$carWeight})
+    output$carTransmissionMode <- renderText({
+      input$calculateButton
+      isolate(translateAmToText(input$carTransmissionMode))
+    })
+    output$carCylinder <- renderText({
+      input$calculateButton
+      isolate(input$carCylinder)
+    })
+    output$carWeight <- renderText({
+      input$calculateButton
+      isolate(input$carWeight)
+    })
     output$prediction <- renderText({
       input$calculateButton
       isolate(predictMpg(as.numeric(input$carTransmissionMode), 

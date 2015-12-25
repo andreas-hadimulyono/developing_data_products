@@ -28,11 +28,13 @@ shinyUI(
                fit on transmission mode, number of cylinders, and weight. The model is built
                using the mtcars dataset."),
              p("To use this application, enter the three input parameters and click 
-               Calculate button"),
+               Calculate button. After calculate button is clicked, the column at the
+               center will be updated with the entered input values and the result of
+               the prediction."),
              h2("Mode of Transmission"),
              p("The car's mode of transmission, either Automatic or Manual"),
              h2("Number of Cylinder"),
-             p("The car's number of cylinder"),
+             p("The car's number of cylinder. This number should be between 4 and 8."),
              h2("Car's Weight"),
              p("The car's weight in lb"))
     )
